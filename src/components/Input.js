@@ -1,11 +1,6 @@
 import React, { useState } from 'react';
-/* 
-  【inputコンポーネント】
-　・新しいTodoを作成するINPUTフィールドを作成するコンポーネント
-　・Enterをクリックされたら入力された文字を使って新しいTodoを作成する
-*/
-function Input( {onAdd} ) {
-  
+
+function Input( { onAdd } ) {
   const [text, setText] = React.useState('');
 
   const handleChange = e => setText(e.target.value);
@@ -19,10 +14,10 @@ function Input( {onAdd} ) {
 
   return (
     <div className="panel-block">
-          <input
+      <input
         class="input"
         type="text"
-        placeholder="Enter to add"
+        placeholder="Todoを入力してください"
         value={text}
         onChange={handleChange}
         onKeyDown={handleKeyDown}
