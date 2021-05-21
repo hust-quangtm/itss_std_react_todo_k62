@@ -9,9 +9,8 @@ const firebaseConfig = {
   appId: "1:501525580831:web:5cf836dc6bb0fb488bd92a"
 };
 
-firebase.initializeApp(firebaseConfig);
-
 const db = firebase.firestore();
+export const auth = firebase.auth();
 export default firebase;
 
 export const getFirebaseItems = async () => {
@@ -54,8 +53,6 @@ export const clearFirebaseItem = async (item) => {
     console.log(err);
   });
 };
-
-export const auth = firebase.auth();
 
 export const uiConfig = {
   signInFlow: 'popup',
